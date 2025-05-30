@@ -1,0 +1,24 @@
+<svg width="500" height="150" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 60px;
+      font-weight: 600;
+      fill: #FFFFFF;
+    }
+    .highlight {
+      fill: #FEC401;
+    }
+  </style>
+
+  <!-- 'i' -->
+  <text x="20" y="100" class="text">i</text>
+
+  <!-- 'N' with highlight and brackets -->
+  <path d="M45 40 Q35 75 45 110" stroke="#FEC401" fill="none" stroke-width="6" />
+  <text x="60" y="100" class="text highlight">N</text>
+  <path d="M115 40 Q125 75 115 110" stroke="#FEC401" fill="none" stroke-width="6" />
+
+  <!-- 'vestEQ' with appropriate spacing and size -->
+  <text x="145" y="100" class="text" letter-spacing="5">vestEQ</text>
+</svg>
