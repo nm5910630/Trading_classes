@@ -1,0 +1,1436 @@
+{% load static %}
+{% block css %}
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Premium HTML5 Template by Indonez">
+	<meta name="keywords" content="blockit, uikit3, indonez, handlebars, scss, javascript">
+	<meta name="author" content="Indonez">
+	<meta name="theme-color" content="#FC5B3F">
+	<!-- preload assets -->
+	<link rel="preload" href="{% static 'fonts/fa-brands-400.woff2' %}" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="{% static 'fonts/fa-solid-900.woff2' %}" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="{% static 'fonts/inter-v12-latin-regular.woff2' %}" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="{% static 'fonts/inter-v12-latin-500.woff2' %}" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="{% static 'fonts/inter-v12-latin-700.woff2' %}" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="{% static 'css/style.css' %}" as="style">
+	<link rel="preload" href="{% static 'js/vendors/uikit.min.js' %}" as="script">
+	<link rel="preload" href="{% static 'js/utilities.min.js' %}" as="script">
+	<link rel="preload" href="{% static 'js/config-theme.js' %}" as="script">
+	<!-- In your head section -->
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.0/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.16.0/dist/js/uikit-icons.min.js"></script>
+	<!-- stylesheet -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<!-- uikit -->
+	<script src="{% static 'js/vendors/uikit.min.js' %}"></script>
+	<!-- favicon -->
+	<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+	<!-- touch icon -->
+	<link rel="apple-touch-icon-precomposed" href="{% static 'img/apple-touch-icon.png' %}">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<title>InvestEQ</title>
+</head>
+{% endblock css %}
+{% block body %}
+<body>
+	<!-- page loader begin -->
+	<div class="page-loader">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<!-- page loader end -->
+	<!-- header begin -->
+	<header>
+		<div class="uk-section uk-padding-remove-vertical">
+			<nav class="uk-navbar-container" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
+				<div class="uk-container" data-uk-navbar>
+					<div class="uk-navbar-left">
+						<a class="uk-navbar-item uk-logo" href="index.html">
+							<img src="{% static 'img/user/header-logo-6ohuZh.svg' %}" alt="logo" width="160" height="34">
+						</a>
+						<ul class="uk-navbar-nav uk-visible@m">
+							<li><a href="{% url 'dashboard' %}">Home</a></li>
+							<li><a href="{% url 'features' %}">Features</a></li>
+						</ul>
+					</div>
+					<div class="uk-navbar-right">
+						<!-- <div class="uk-navbar-item uk-visible@m in-optional-nav">
+							<a href="#" class="uk-button uk-button-primary uk-border-rounded">Create account</a>
+							<a href="signin.html" class="uk-button uk-button-link">Sign in<i class="fas fa-user-circle"></i></a>
+						</div> -->
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+{% endblock body %}
+	<!-- header end -->
+{% block content %}
+	<main>
+		<!-- slideshow content begin -->
+		<div class="uk-section uk-padding-remove-vertical">
+			<div class="uk-light in-slideshow uk-background-cover uk-background-top-center" style="background-image: url('/static/img/in-liquid-slide-bg.png');"  data-uk-slideshow>
+				<ul class="uk-slideshow-items">
+					<li>
+						<div class="uk-container">
+							<div class="uk-grid-medium uk-grid" data-uk-grid="">
+								<div class="uk-width-1-2@s uk-first-column">
+									<div class="uk-overlay">
+										<h1>Built For
+											<span class="word-swap-animation">
+												<span class="investor" style="color: #fb300d;">Investor</span>
+												<span class="trader" style="color: #fb300d;">Trader</span>
+											</span>
+											<br> Powered By Unite Community.
+										  </h1>
+										<p class="uk-text-lead uk-visible@m">Unite Community revolutionizes India's trading with data-driven strategies, high-accuracy signals, and expert insights—bridging knowledge and profits for consistent trader success.</p>
+										<a href="#" class="uk-button uk-button-default uk-border-rounded uk-visible@s">Discover platform</a>
+									</div>
+								</div>
+								<!-- <div class="uk-width-1-2@s">
+									<img class="in-slide-img" 
+									src="{% static 'img/in-lazy.gif' %}" 
+									data-src="{% static 'img/in-liquid-slide-1.svg' %}" 
+									alt="image-slide" 
+									width="500" 
+									height="400"
+									data-uk-img>
+								</div> -->
+								<div class="uk-width-1-2@s" style="position: relative; min-height: 400px;" data-uk-img>
+									<!-- SVG Background -->
+									<div class="uk-background-contain uk-background-top-center" 
+										 style="
+												height: 100%;
+												width: 100%;
+												position: absolute;
+												z-index: 0;">
+									</div>
+									
+									<!-- Base Image (Bottom) -->
+									<img class="in-slide-img"
+										 src="{% static 'img/in-lazy.gif' %}"
+										 data-src="{% static 'img/base.png' %}"
+										 alt="Device Platform"
+										 style="position: absolute;
+												bottom: 0;
+												left: 50%;
+												transform: translateX(-50%);
+												width: 400px;
+												max-width: 90%;
+												z-index: 2;"
+										 data-uk-img>
+									
+									<!-- Mobile Images Container with Animation -->
+									<div style="position: absolute;
+										bottom: 90px;
+										left:0px;
+										width: 100%;
+										display: flex;
+										justify-content: center;
+										gap: 40px;
+										z-index: 3;">
+										<!-- First Mobile Image -->
+										<!-- First Mobile (Right Side) -->
+										<img class="in-slide-img floating-phone" 
+										src="{% static 'img/1-phone' %}" 
+										data-src="{% static 'img/1-phone.png' %}" 
+										alt="Mobile App Screen 1" 
+										width="260"
+										style="height: auto;"
+										data-uk-img>
+										
+									<!-- Second Mobile (Left Side) -->
+									<!-- <img class="in-slide-img mobile-bounce-animation-2" 
+										src="{% static 'img/in-lazy.gif' %}" 
+										data-src="{% static 'img/mobile2.png' %}" 
+										alt="Mobile App Screen 2" 
+										width="220"
+										style="height: auto;"
+										data-uk-img> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" data-uk-slidenav-previous data-uk-slideshow-item="previous"></a>
+				<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" data-uk-slidenav-next data-uk-slideshow-item="next"></a> -->
+				<div class="uk-section uk-padding-remove-vertical in-slideshow-features uk-visible@m">
+					<form method="POST" name="myform">
+						{% csrf_token %}
+						<div class="uk-container" style="max-width: 2000px;">
+							<div class="uk-position-relative" tabindex="-1" 
+								 data-uk-slider="autoplay: true; autoplay-interval: 1500; pause-on-hover: false; velocity: 0.5; draggable: false; infinite: true">
+								
+								<div class="uk-slider-container" style="overflow: hidden;">
+									<ul class="uk-slider-items uk-child-width-auto" style="margin: 0; white-space: nowrap; white-space: nowrap;  /* Prevent line breaks */
+  										
+										transition-timing-function: linear;">
+										{% for stock in stocks %}
+										<li class="stock-item" data-symbol="{{ stock.symbol }}" style="display: flex; align-items: center; padding: 0 15px; gap: 5px;">
+											<!-- Left Column: Image and Company Name -->
+											<div style="display: flex; flex-direction: column; align-items: center; min-width: 60px;">
+												<img src="{{ stock.image.url }}" alt="{{ stock.company_name }}" 
+													 title="{{ stock.company_name }}" 
+													 style="height: 24px; width: auto; margin-bottom: 2px;">
+												<div class="company-name" style="
+													font-size: 11px;
+													color: #fff;
+													max-width: 60px;
+													white-space: nowrap;
+													overflow: hidden;
+													text-overflow: ellipsis;
+													text-align: center;
+												">{{ stock.symbol|slice:":-3" }}</div>
+											</div>
+											
+											<!-- Right Column: Price and Change Card -->
+											<span class="uk-label change stock-card" style="
+												padding: 4px 12px;
+												display: inline-flex;
+												flex-direction: column;
+												align-items: center;
+												justify-content: center;
+												line-height: 1.3;
+												min-width: 70px;
+											">
+												<span class="price" style="font-weight: bold; font-size: 14px;">{{ stock.price|floatformat:2 }}</span>
+												<span class="change-percent" style="font-size: 11px;"></span>
+											</span>
+										</li>
+										{% endfor %}
+										
+										<!-- Duplicate items for seamless looping -->
+										{% for stock in stocks %}
+										<li class="stock-item" data-symbol="{{ stock.symbol }}" style="display: flex; align-items: center; padding: 0 15px; gap: 5px;">
+											<!-- Left Column: Image and Company Name -->
+											<div style="display: flex; flex-direction: column; align-items: center; min-width: 60px;">
+												<img src="{{ stock.image.url }}" alt="{{ stock.company_name }}" 
+													 title="{{ stock.company_name }}" 
+													 style="height: 24px; width: auto; margin-bottom: 2px;">
+												<div class="company-name" style="
+													font-size: 11px;
+													color: #fff;
+													max-width: 60px;
+													white-space: nowrap;
+													overflow: hidden;
+													text-overflow: ellipsis;
+													text-align: center;
+												">{{ stock.symbol|slice:":-3" }}</div>
+											</div>
+											
+											<!-- Right Column: Price and Change Card -->
+											<span class="uk-label change stock-card" style="
+												padding: 4px 12px;
+												display: inline-flex;
+												flex-direction: column;
+												align-items: center;
+												justify-content: center;
+												line-height: 1.3;
+												min-width: 70px;
+											">
+												<span class="price" style="font-weight: bold; font-size: 14px;">{{ stock.price|floatformat:2 }}</span>
+												<span class="change-percent" style="font-size: 11px;"></span>
+											</span>
+										</li>
+										{% endfor %}
+									</ul>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="uk-section in-liquid-14">
+			<div class="uk-container">
+				<div class="uk-grid-large uk-flex uk-flex-middle" data-uk-grid>
+					<div class="uk-width-expand@m">
+						<h2>A broker you can <span class="in-highlight">Trust</span>.</h2>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+						<div class="uk-grid uk-grid-collapse uk-child-width-1-3@m uk-child-width-1-2@s uk-text-center uk-margin-medium-top">
+							<div class="uk-tile uk-tile-default">
+								<p class="uk-text-lead uk-margin-remove-bottom">LQUD</p>
+								<p class="uk-text-small uk-text-muted uk-margin-remove-top">Nasdaq Listed</p>
+							</div>
+							<div class="uk-tile uk-tile-default">
+								<p class="uk-text-lead uk-margin-remove-bottom">$7B</p>
+								<p class="uk-text-small uk-text-muted uk-margin-remove-top">Equity Capital</p>
+							</div>
+							<div class="uk-tile uk-tile-default">
+								<p class="uk-text-lead uk-margin-remove-bottom">78.2%</p>
+								<p class="uk-text-small uk-text-muted uk-margin-remove-top">Privately Held</p>
+							</div>
+							<div class="uk-tile uk-tile-default">
+								<p class="uk-text-lead uk-margin-remove-bottom">$6.0B</p>
+								<p class="uk-text-small uk-text-muted uk-margin-remove-top">Excess Capital</p>
+							</div>
+							<div class="uk-tile uk-tile-default uk-visible@m">
+								<p class="uk-text-lead uk-margin-remove-bottom">1.07M</p>
+								<p class="uk-text-small uk-text-muted uk-margin-remove-top">Client Accounts</p>
+							</div>
+							<div class="uk-tile uk-tile-default uk-visible@m">
+								<p class="uk-text-lead uk-margin-remove-bottom">2.11M</p>
+								<p class="uk-text-small uk-text-muted uk-margin-remove-top">Daily Avg Revenue</p>
+							</div>
+						</div>
+						<a class="uk-button uk-button-text uk-border-rounded uk-margin-medium-top" href="#">Asset protection<i class="fas fa-angle-right uk-margin-small-left"></i></a>
+						<p class="uk-text-small">For additional information view our Investors Relations - <a href="#">clicking here.</a></p>
+					</div>
+					<div class="uk-width-1-2@m">
+						<img class="uk-width-1-1" src="{% static 'img/in-lazy.gif' %}" data-src="{% static 'img/in-liquid-object-5.svg' %}" alt="sample-image" width="555" height="418" data-uk-img>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="uk-section" style="padding-bottom: 0px;">
+			<div class="uk-light in-slideshow uk-background-cover uk-background-top-center" style="background-image: url('/static/img/in-liquid-slide-bg.png');">
+				<ul class="uk-slideshow-items">
+					<li>
+						<div class="uk-container uk-margin-large-top">
+							<div class="uk-grid uk-flex-center" data-uk-grid>
+								<div class="uk-width-1-1@s">
+									<div class="uk-overlay uk-text-center uk-margin-medium-top">
+										<h2 class="uk-margin-remove-top uk-heading-medium">
+											Catch institutional<br>
+											<span style="color: #fc5b3f;">M</span><span class="animatedText" style="color: #fc5b3f;">oves Everyday</span>
+										</h2>
+										<div class="phone-wrapper uk-margin-remove-top">
+											<img src="{% static 'img/1-phone.png' %}" alt="Phone Left" class="phone left uk-border-rounded" style="height: 450px;">
+											<img src="{% static 'img/1-phone.png' %}" alt="Phone Center" class="phone center uk-border-rounded" style="height: 500px;">
+											<img src="{% static 'img/1-phone.png' %}" alt="Phone Right" class="phone right uk-border-rounded" style="height: 450px;">
+										</div>
+						
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div> -->
+		
+		<div class="uk-section uk-section-secondary in-liquid-1">
+			<div class="uk-container uk-light">
+				<div class="uk-overlay uk-text-center uk-margin-top">
+					<h2 class="uk-margin-remove-top uk-heading-medium">Top <span class="animatedText"  style="color: #fc5b3f;">Features</span></h2>
+				</div>
+				<div class="uk-child-width-1@m" data-uk-grid>
+					<div class="uk-border-rounded uk-card uk-card-body uk-box-shadow-medium custom-hover-border"
+						style="border: 2px solid #8a7e7e; transition: border-color 0.3s ease; padding: 25px;">  <!-- Reduced padding here -->
+						<div class="uk-grid-small uk-flex-middle" data-uk-grid style="margin: -5px;">  <!-- Negative margin to reduce space -->
+							<!-- Left side - Text content -->
+							<div class="uk-width-expand@m">
+								<div class="uk-card-body" style="padding: 10px;">  <!-- Reduced padding here -->
+									<h3 class="uk-margin-remove-top uk-heading-xsmall">World Class Education</h3>
+									<p>Learn professional institutional trading from the absolute basics. Experience the world of smart money concepts.</p>
+									<ul class="uk-text-white">
+										<li>Learn 10+ institutional trading strategies.</li>
+										<li>We teach equity, futures, options, commodities &amp; forex trading.</li>
+										<li>Attend weekly live webinars and interactive Q&amp;A sessions.</li>
+										<li>Course available in English &amp; Hindi language.</li>
+									</ul>
+								</div>
+							</div>
+							
+							<!-- Right side - Image -->
+							<div class="uk-border-rounded uk-width-auto@m" style="border: 0.3px solid #8a7e7e; margin: 0;">  <!-- Removed margin -->
+								<div class="uk-card-media-right uk-cover-container">
+									<img src="{% static 'img/bg7654.png' %}" 
+										data-src="{% static 'img/bg7654.png' %}" 
+										alt="sample-image" 
+										width="500" 
+										height="396" 
+										data-uk-img
+										data-uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="uk-child-width-1@m" data-uk-grid>
+					<div class="uk-border-rounded uk-card uk-card-body uk-box-shadow-medium custom-hover-border"
+						style="border: 2px solid #8a7e7e; transition: border-color 0.3s ease; padding: 25px;">  <!-- Reduced padding here -->
+						<div class="uk-grid-small uk-flex-middle" data-uk-grid style="margin: -5px;">  <!-- Negative margin to reduce space -->
+							<!-- Right side - Image -->
+							<div class="uk-border-rounded uk-width-auto@m" style="border: 0.3px solid #8a7e7e; margin: 0;">  <!-- Removed margin -->
+								<div class="uk-card-media-right uk-cover-container">
+									<img src="{% static 'img/bullbear-1536x1536.png' %}" 
+										data-src="{% static 'img/bullbear-1536x1536.png' %}" 
+										alt="sample-image" 
+										width="500" 
+										height="396" 
+										data-uk-img
+										data-uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+								</div>
+							</div>
+							<!-- Left side - Text content -->
+							<div class="uk-width-expand@m">
+								<div class="uk-card-body" style="padding: 10px;">  <!-- Reduced padding here -->
+									<h3 class="uk-margin-remove-top uk-heading-xsmall">Realtime Trading Signals</h3>
+									<p>Get lightning fast trading & investing signals and callouts from SEBI registered trading experts.</p>
+									<ul class="uk-text-white">
+										<li>Live signals for intraday, swing and positional trading.</li>
+										<li>We cover the cash, futures & options and commodities market.</li>
+										<li>High win rate with an average reward to risk ratio of 2.5x</li>
+										<li>In-depth research reports and insights about trades.</li>
+									</ul>
+									<p>Past performance is not indicative of future performance. Returns are not guaranteed, they can change with market conditions.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="uk-child-width-1@m" data-uk-grid>
+					<div class="uk-border-rounded uk-card uk-card-body uk-box-shadow-medium custom-hover-border"
+						style="border: 2px solid #8a7e7e; transition: border-color 0.3s ease; padding: 25px;">  <!-- Reduced padding here -->
+						<div class="uk-grid-small uk-flex-middle" data-uk-grid style="margin: -5px;">  <!-- Negative margin to reduce space -->
+							<!-- Left side - Text content -->
+							<div class="uk-width-expand@m">
+								<div class="uk-card-body" style="padding: 10px;">  <!-- Reduced padding here -->
+									<h3 class="uk-margin-remove-top uk-heading-xsmall">World Class Education</h3>
+									<p>Learn professional institutional trading from the absolute basics. Experience the world of smart money concepts.</p>
+									<ul class="uk-text-white">
+										<li>Learn 10+ institutional trading strategies.</li>
+										<li>We teach equity, futures, options, commodities &amp; forex trading.</li>
+										<li>Attend weekly live webinars and interactive Q&amp;A sessions.</li>
+										<li>Course available in English &amp; Hindi language.</li>
+									</ul>
+								</div>
+							</div>
+							
+							<!-- Right side - Image -->
+							<div class="uk-border-rounded uk-width-auto@m" style="border: 0.3px solid #8a7e7e; margin: 0;">  <!-- Removed margin -->
+								<div class="uk-card-media-right uk-cover-container">
+									<img src="{% static 'img/features.png' %}" 
+										data-src="{% static 'img/features.png' %}" 
+										alt="sample-image" 
+										width="500" 
+										height="396" 
+										data-uk-img
+										data-uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="uk-child-width-1@m" data-uk-grid>
+					<div class="uk-border-rounded uk-card uk-card-body uk-box-shadow-medium custom-hover-border"
+						style="border: 2px solid #8a7e7e; transition: border-color 0.3s ease; padding: 25px;">  <!-- Reduced padding here -->
+						<div class="uk-grid-small uk-flex-middle" data-uk-grid style="margin: -5px;">  <!-- Negative margin to reduce space -->
+							<!-- Right side - Image -->
+							<div class="uk-border-rounded uk-width-auto@m" style="border: 0.3px solid #8a7e7e; margin: 0;">  <!-- Removed margin -->
+								<div class="uk-card-media-right uk-cover-container">
+									<img src="{% static 'img/11.jpg' %}" 
+										data-src="{% static 'img/11.jpg' %}" 
+										alt="sample-image" 
+										width="500" 
+										height="396" 
+										data-uk-img
+										data-uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
+								</div>
+							</div>
+							<!-- Left side - Text content -->
+							<div class="uk-width-expand@m">
+								<div class="uk-card-body" style="padding: 10px;">  <!-- Reduced padding here -->
+									<h3 class="uk-margin-remove-top uk-heading-xsmall">Realtime Trading Signals</h3>
+									<p>Get lightning fast trading & investing signals and callouts from SEBI registered trading experts.</p>
+									<ul class="uk-text-white">
+										<li>Live signals for intraday, swing and positional trading.</li>
+										<li>We cover the cash, futures & options and commodities market.</li>
+										<li>High win rate with an average reward to risk ratio of 2.5x</li>
+										<li>In-depth research reports and insights about trades.</li>
+									</ul>
+									<p>Past performance is not indicative of future performance. Returns are not guaranteed, they can change with market conditions.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="uk-child-width-1@m" data-uk-grid>
+					<div class="uk-border-rounded uk-card uk-card-body uk-box-shadow-medium custom-hover-border"
+						style="border: 2px solid #8a7e7e; transition: border-color 0.3s ease; padding: 25px;">  <!-- Reduced padding here -->
+						<div class="uk-grid-small uk-flex-middle" data-uk-grid style="margin: -5px;">  <!-- Negative margin to reduce space -->
+							<!-- Left side - Text content -->
+							<div class="uk-width-expand@m">
+								<div class="uk-card-body" style="padding: 10px;">  <!-- Reduced padding here -->
+									<h3 class="uk-margin-remove-top uk-heading-xsmall">World Class Education</h3>
+									<p>Learn professional institutional trading from the absolute basics. Experience the world of smart money concepts.</p>
+									<ul class="uk-text-white">
+										<li>Learn 10+ institutional trading strategies.</li>
+										<li>We teach equity, futures, options, commodities &amp; forex trading.</li>
+										<li>Attend weekly live webinars and interactive Q&amp;A sessions.</li>
+										<li>Course available in English &amp; Hindi language.</li>
+									</ul>
+								</div>
+							</div>
+							
+							<!-- Right side - Image -->
+							<div class="uk-border-rounded uk-width-auto@m" style="border: 0.3px solid #8a7e7e; margin: 0;">  <!-- Removed margin -->
+								<div class="uk-card-media-right uk-cover-container">
+									<img src="{% static 'img/bg7654.png' %}" 
+										data-src="{% static 'img/bg7654.png' %}" 
+										alt="sample-image" 
+										width="500" 
+										height="396" 
+										data-uk-img
+										data-uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="uk-section in-liquid-7 in-offset-top-10">
+			<div class="uk-container">
+				<div class="uk-grid uk-flex uk-flex-center">
+					<div class="uk-width-5-6@m uk-background-contain uk-background-center-center" style="background-image: url(/static/img/in-liquid-7-bg.png);" data-uk-img>
+						<div class="uk-text-center">
+							<h2 class="uk-margin-remove">Liquid trading platform.</h2>
+							<p class="uk-text-lead uk-text-muted uk-margin-small-top">Improve your trading results with our industry-leading technology</p>
+						</div>
+						<div class="uk-grid-medium uk-child-width-1-3@s uk-child-width-1-3@m uk-text-center uk-margin-top" data-uk-grid>
+							<div>
+								<img src="{% static 'img/in-lazy.gif' %}" data-src="{% static 'img/in-liquid-award.svg' %}" alt="wave-award" width="71" height="58" data-uk-img>
+								<h6 class="uk-margin-small-top uk-margin-remove-bottom">Best CFD Broker</h6>
+								<p class="uk-text-small uk-margin-remove-top">TradeON Summit 2020</p>
+							</div>
+							<div>
+								<img src="{% static 'img/in-lazy.gif' %}" data-src="{% static 'img/in-liquid-award.svg' %}" alt="wave-award" width="71" height="58" data-uk-img>
+								<h6 class="uk-margin-small-top uk-margin-remove-bottom">Best Execution Broker</h6>
+								<p class="uk-text-small uk-margin-remove-top">Forex EXPO Dubai 2020</p>
+							</div>
+							<div>
+								<img src="{% static 'img/in-lazy.gif' %}" data-src="{% static 'img/in-liquid-award.svg' %}" alt="wave-award" width="71" height="58" data-uk-img>
+								<h6 class="uk-margin-small-top uk-margin-remove-bottom">Best Trading Platform</h6>
+								<p class="uk-text-small uk-margin-remove-top">London Summit 2020</p>
+							</div>
+						</div>
+						<img class="uk-align-center" src="{% static 'img/in-liquid-7-mockup copy.png' %}" data-src="{% static 'img/in-liquid-7-mockup copy.png' %}" alt="sample-images" width="691" height="420" data-uk-img>
+						<div class="uk-grid-divider uk-child-width-1-2@s uk-child-width-1-4@m uk-text-center in-offset-top-10" data-uk-grid>
+							<div>
+								<h2 class="uk-margin-small-bottom">~30ms</h2>
+								<p class="uk-text-small uk-text-uppercase uk-margin-remove-top">executions speed*</p>
+							</div>
+							<div>
+								<h2 class="uk-margin-small-bottom">24/5</h2>
+								<p class="uk-text-small uk-text-uppercase uk-margin-remove-top">support</p>
+							</div>
+							<div>
+								<h2 class="uk-margin-small-bottom">0.0</h2>
+								<p class="uk-text-small uk-text-uppercase uk-margin-remove-top">spread from 0.0 pips</p>
+							</div>
+							<div>
+								<h2 class="uk-margin-small-bottom">150+</h2>
+								<p class="uk-text-small uk-text-uppercase uk-margin-remove-top">trading instruments</p>
+							</div>
+						</div>
+						<div class="uk-text-center uk-margin-medium-top">
+							<!-- <a class="uk-button uk-button-primary uk-border-rounded uk-margin-small-right" href="#">Create account<i class="fas fa-angle-right uk-margin-small-left"></i></a>
+							<a class="uk-button uk-button-secondary uk-border-rounded" href="#">Discover platform<i class="fas fa-angle-right uk-margin-small-left"></i></a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="uk-section uk-section-muted uk-padding-large@m in-liquid-12 uk-background-contain uk-background-bottom-center" data-src="{% static 'img/in-liquid-12-bg.png' %}" data-uk-img>
+			<div class="uk-container">
+				<div class="uk-grid uk-flex uk-flex-center">
+					<div class="uk-width-3-4@m">
+						<div>
+							<div class="uk-flex uk-flex-middle" data-uk-grid>
+								<div class="uk-width-1-1 uk-width-expand@m">
+									<blockquote>
+										<p class="uk-margin-bottom">Great platform for starting traders, great selection and transparent fee. Liquid has been making my trading experience enjoyable and secure.</p>
+									</blockquote>
+									
+								</div>
+								<div class="uk-width-1-1 uk-width-auto@m in-margin-remove-left@s uk-flex-first uk-flex-last@m">
+									<img class="uk-border-pill uk-background-muted uk-align-center uk-margin-remove-bottom" src="{% static 'img/in-lazy.gif' %}" data-src="{% static 'img/blockit/in-team-1.png' %}" alt="client-testimoni" width="180" height="180" data-uk-img>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="uk-section uk-section-secondary in-liquid-1">
+			<div class="uk-container uk-light">
+				<div class="uk-overlay uk-text-center uk-margin-top">
+					<h2 class="uk-margin-remove-top uk-heading-medium">Join India's Smartest<br> <span style="color: #fc5b3f;">T</span><span class="animatedText" class="trader" style="color: #fc5b3f;">raders & Investors</span></h2>
+				</div>
+				<div class="uk-grid-small uk-child-width-1-3@m uk-grid-match uk-margin-large-top" data-uk-grid>
+					<!-- First Row -->
+					<div class="container">
+						<div class="card">
+							<div class="image">
+								<img href="#" src="{% static 'img/441.png' %}">
+							</div>
+							<div class="content">
+								<h3 class="uk-card-title-small">Connect with Professional Traders & Investors</h3>
+								<p>Share, discuss, and execute trades in real time with voice chat and live streaming.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="container">
+						<div class="card">
+							<div class="image">
+								<img href="#" src="{% static 'img/221.png' %}">
+							</div>
+							<div class="content">
+								<h3 class="uk-card-title-small">Build Strong Network</h3>
+								<p>Connect with professionals across finance, tech, and investment banking.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="container">
+						<div class="card">
+							<div class="image">
+								<img href="#" src="{% static 'img/331.png' %}">
+							</div>
+							<div class="content">
+								<h3 class="uk-card-title-small">AI Market Updates</h3>
+								<p>AI-powered news catalysts with market-moving insights.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="uk-section" style="padding-bottom: 0px;">
+			<div class="uk-light in-slideshow uk-background-cover uk-background-top-center" style="background-image: url('/static/img/in-liquid-slide-bg.png');">
+				<ul class="uk-slideshow-items">
+					<li>
+						<div class="uk-container uk-margin-medium-top">
+							<div class="uk-grid uk-flex-center" style="position: relative" data-uk-grid>
+								<div class="uk-width-1-1@s">  <!-- Changed to full width -->
+									<div class="uk-overlay uk-text-center uk-margin-top">
+										<h2 class="uk-margin-remove-top uk-heading-medium">Membership Unite <span class="animatedText"  style="color: #fc5b3f;">Plans</span></h2>
+										<p class="uk-text-lead uk-visible@m">Gain unfiltered access to the tactics of India's top 1% traders.</p>
+										
+										<!-- Large Image Container -->
+										<div class="uk-margin-large-top uk-width-1-1" style="max-width: 850px; margin-left: auto; margin-right: auto;">
+											<img src="{% static 'img/banner.png' %}" 
+												 alt="Trading Platform" 
+												 class="uk-border-rounded"
+												 style="width: 100%; 
+														height: auto;">
+										</div>
+										
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="uk-section uk-section-secondary in-liquid-1">
+			<div class="uk-container uk-margin-medium-top uk-margin-medium-bottom" style="max-width: 1000px;">
+				<div class="uk-text-center uk-margin-small-bottom">
+					<h2 class="uk-heading-medium uk-text-bold" data-uk-scrollspy="cls: uk-animation-fade; delay: 100">
+						Why <span style="color: #fc5b3f;">i</span><span class="animatedText"  style="color: #fc5b3f;">nvestEQ?</span>
+					</h2>
+				</div>
+				<div class="uk-position-relative uk-visible-toggle" tabindex="-1"
+					data-uk-slider="autoplay: true; autoplay-interval: 2000; pause-on-hover: true; velocity: 1; infinite: true">
+					
+					<div class="uk-child-width-1-3@m" data-uk-grid >
+						<div class="why">
+							<div class="uk-card uk-card-secondary uk-border-rounded uk-cover-container uk-box-shadow-medium custom-hover-border" style="border: 2px solid #313030; transition: border-color 0.3s ease;">
+								<div class="uk-card-media-top investeq-card">
+									<img src="{% static 'img/download (5).svg' %}" 
+									data-src="{% static 'img/download (5).svg' %}" 
+									alt="SEBI Registered" 
+									width="80" 
+									height="80" 
+									data-uk-img
+									class="flip-image" 
+									style="transition: transform 0.6s ease; transform-style: preserve-3d;">
+								</div>
+								<div class="uk-card-body" style="margin-top:5px;">
+									<h3><span style="color: #fc5b3f;">We are SEBI</span></h3>
+									<p style="color:white;">Registered Experts<br><br></p>
+								</div>
+							</div>
+						</div>
+						<div class="why">
+							<div class="uk-card uk-card-secondary uk-border-rounded uk-cover-container  uk-box-shadow-medium custom-hover-border" style="border: 2px solid #313030; transition: border-color 0.3s ease;">
+								<div class="uk-card-media-top investeq-card">
+									<img src="{% static 'img/download (4).svg' %}" 
+									data-src="{% static 'img/download (4).svg' %}" 
+									alt="SEBI Registered" 
+									width="80" 
+									height="80" 
+									data-uk-img
+									class="flip-image" 
+									style="transition: transform 0.6s ease; transform-style: preserve-3d;">
+								</div>
+								<div class="uk-card-body" style="margin-top:10px;">
+									<h3><span style="color: #fc5b3f;">AI-Engine</span></h3>
+									<p style="color:white;">Powered By The Most Powerful A.I Trading Tools</p>
+								</div>
+							</div>
+						</div>
+						<div class="why">
+							<div class="uk-card uk-card-secondary uk-border-rounded uk-cover-container  uk-box-shadow-medium custom-hover-border" style="border: 2px solid #313030; transition: border-color 0.3s ease;">
+								<div class="uk-card-media-top investeq-card">
+									<img src="{% static 'img/download (3).svg' %}" 
+									data-src="{% static 'img/download (3).svg' %}" 
+									alt="SEBI Registered" 
+									width="80" 
+									height="80" 
+									data-uk-img
+									class="flip-image" 
+									style="transition: transform 0.6s ease; transform-style: preserve-3d;">
+								</div>
+								<div class="uk-card-body" style="margin-top:10px;">
+									<h3><span style="color: #fc5b3f;">20,000+</span></h3>
+									<p style="color:white;">Active Pro Traders & Investors</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="uk-child-width-1-3@m" data-uk-grid>
+						<div class="why">
+							<div class="uk-card uk-card-secondary uk-border-rounded uk-cover-container  uk-box-shadow-medium custom-hover-border" style="border: 2px solid #313030; transition: border-color 0.3s ease;">
+								<div class="uk-card-media-top investeq-card">
+									<img src="{% static 'img/download (2).svg' %}" 
+									data-src="{% static 'img/download (2).svg' %}" 
+									alt="SEBI Registered" 
+									width="80" 
+									height="80" 
+									data-uk-img
+									class="flip-image" 
+									style="transition: transform 0.6s ease; transform-style: preserve-3d;">
+								</div>
+								<div class="uk-card-body" style="margin-top:10px;">
+									<h3><span style="color: #fc5b3f;">Daily Live Trading</span></h3>
+									<p style="color:white;">Stream Live With Pro Traders, Everybody</p>
+								</div>
+							</div>
+						</div>
+						<div class="why">
+							<div class="uk-card uk-card-secondary uk-border-rounded uk-cover-container  uk-box-shadow-medium custom-hover-border" style="border: 2px solid #313030; transition: border-color 0.3s ease;">
+								<div class="uk-card-media-top investeq-card">
+									<img src="{% static 'img/download (1).svg' %}" 
+									data-src="{% static 'img/download (1).svg' %}" 
+									alt="SEBI Registered" 
+									width="80" 
+									height="80" 
+									data-uk-img
+									class="flip-image" 
+									style="transition: transform 0.6s ease; transform-style: preserve-3d;">
+								</div>
+								<div class="uk-card-body" style="margin-top:10px;">
+									<h3><span style="color: #fc5b3f;">Verified P&L</span></h3>
+									<p style="color:white;">Shared Everyday With Verified Trade Executions</p>
+								</div>
+							</div>
+						</div>
+						<div class="why">
+							<div class="uk-card uk-card-secondary uk-border-rounded uk-cover-container  uk-box-shadow-medium custom-hover-border" style="border: 2px solid #313030; transition: border-color 0.3s ease;">
+								<div class="uk-card-media-top investeq-card">
+									<img src="{% static 'img/download.svg' %}" 
+									data-src="{% static 'img/download.svg' %}" 
+									alt="SEBI Registered" 
+									width="80" 
+									height="80" 
+									data-uk-img
+									class="flip-image" 
+									style="transition: transform 0.6s ease; transform-style: preserve-3d;">
+								</div>
+								<div class="uk-card-body" style="margin-top:10px;">
+									<h3><span style="color: #fc5b3f;">125+ Crores</span></h3>
+									<p style="color:white;">Daily Community Wide Trading Turnover</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="uk-section uk-padding-remove-vertical" style="background-image: url('/static/img/in-liquid-slide-bg.png'); background-size: cover;">
+				<div class="uk-container"> -->
+					<!-- Desktop Version -->
+					<!-- <div class="uk-visible@m">
+						<ul class="uk-tab uk-flex-center" uk-tab>
+							<li><a href="#">VIP</a></li>
+							<li class="uk-active">
+								<span class="uk-label uk-label-danger" style="position: absolute; top: -20px; right: 10px;">Recommended</span>
+								<a href="#">VIP+</a>
+							</li>
+						</ul>
+			
+						<ul class="uk-switcher uk-margin">
+							<li>
+								<div class="uk-grid-medium uk-child-width-1-1 uk-child-width-1-2@m" uk-grid>
+									<div class="uk-width-1-1 uk-width-3-5@m">
+										<div class="uk-card uk-card-default uk-card-body uk-border-rounded" style="max-width: 200px; margin: 0 auto;">
+											<span class="uk-label uk-label-warning">Hindi</span>
+											<h3 class="uk-margin-small-top">
+												<span style="text-decoration: line-through; font-size: 1.2rem;">₹ 19,999</span>
+												<span class="uk-display-block uk-text-bold" style="font-size: 2rem;">₹ 14,490</span>
+												<span class="uk-text-meta">Inclusive of 18% GST</span>
+											</h3>
+											<p class="uk-text-lead">Designed for serious traders and investors who want to become full time traders.</p>
+											<h4>Includes:</h4>
+											<ul class="uk-list uk-list-bullet">
+												<li>Super Trader Course with <b>Pre Recorded Sessions</b></li>
+												<li>Access to <b>10+ Institutional Trading Strategies</b></li>
+												<li><b>Daily Trading & Investing Signals</b> in Cash, F&O, Commodities Segment for 1 Year</li>
+												<li>Daily Watchlist, Stock Research and <b>Assistance with Trade Buddy.</b></li>
+												<li>Daily <b>LIVE Trading with SEBI Registered Experts</b></li>
+												<li>Access to <b>Stryke by StockWiz</b> Trading App</li>
+												<li><b>365 Days</b> Doubt Support</li>
+											</ul>
+											<a href="https://rzp.io/l/STOCKWIZ" class="uk-button uk-button-primary uk-border-rounded uk-width-1-1" target="_blank">Buy Now</a>
+										</div>
+									</div>
+									
+									<div class="uk-width-1-1 uk-width-3-5@m">
+										<div class="uk-card uk-card-default uk-card-body uk-border-rounded" style="max-width: 400px; margin: 0 auto;">
+											<span class="uk-label uk-label-warning">English</span>
+											<h3 class="uk-margin-small-top">
+												<span style="text-decoration: line-through; font-size: 1.2rem;">₹ 19,999</span>
+												<span class="uk-display-block uk-text-bold" style="font-size: 2rem;">₹ 14,490</span>
+												<span class="uk-text-meta">Inclusive of 18% GST</span>
+											</h3>
+											<p class="uk-text-lead">Designed for serious traders and investors who want to become full time traders.</p>
+											<h4>Includes:</h4>
+											<ul class="uk-list uk-list-bullet">
+												<li>Super Trader Course with <b>Pre Recorded Sessions</b></li>
+												<li>Access to <b>10+ Institutional Trading Strategies</b></li>
+												<li><b>Daily Trading & Investing Signals</b> in Cash, F&O, Commodities Segment for 1 Year</li>
+												<li>Daily Watchlist, Stock Research and <b>Assistance with Trade Buddy.</b></li>
+												<li>Daily <b>LIVE Trading with SEBI Registered Experts</b></li>
+												<li>Access to <b>Stryke by StockWiz</b> Trading App</li>
+												<li><b>365 Days</b> Doubt Support</li>
+											</ul>
+											<a href="https://rzp.io/l/STOCKWIZ" class="uk-button uk-button-primary uk-border-rounded uk-width-1-1" target="_blank">Buy Now</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+							<li>
+								<div class="uk-grid-medium uk-child-width-1-2@m" uk-grid>
+									<div>
+										<div class="uk-card uk-card-secondary uk-card-body uk-border-rounded uk-box-shadow-large" style="border: 2px solid #5b5757;">
+											<span class="uk-label uk-label-warning">Hindi</span>
+											<h3 class="uk-margin-small-top">
+												<span style="text-decoration: line-through; font-size: 1.2rem;">₹ 24,999</span>
+												<span class="uk-display-block uk-text-bold" style="font-size: 2rem;">₹ 17,999</span>
+												<span class="uk-text-meta">Inclusive of 18% GST</span>
+											</h3>
+											<p class="uk-text-lead">Designed for serious traders and investors who want to become full time traders.</p>
+											<h4>Includes:</h4>
+											<ul class="uk-list uk-list-bullet">
+												<li>Super Trader Course with <b>Live & Pre Recorded Sessions</b></li>
+												<li>Access to <b>10+ Institutional Trading Strategies</b></li>
+												<li><b>Daily Trading & Investing Signals</b> in Cash, F&O, Commodities Segment for Lifetime</li>
+												<li>Daily Watchlist, Stock Research and <b>Assistance with Trade Buddy.</b></li>
+												<li>Daily <b>LIVE Trading with SEBI Registered Experts</b></li>
+												<li>Access to <b>Stryke by StockWiz</b> Trading App</li>
+												<li><b>Lifetime</b> Doubt Support</li>
+											</ul>
+											<a href="https://rzp.io/rzp/FeMRJcc8" class="uk-button uk-button-danger uk-border-rounded uk-width-1-1" target="_blank">Buy Now</a>
+										</div>
+									</div>
+									
+									<div>
+										<div class="uk-card uk-card-secondary uk-card-body uk-border-rounded uk-box-shadow-large" style="border: 2px solid #5b5757;">
+											<span class="uk-label uk-label-warning">English</span>
+											<h3 class="uk-margin-small-top">
+												<span style="text-decoration: line-through; font-size: 1.2rem;">₹ 24,999</span>
+												<span class="uk-display-block uk-text-bold" style="font-size: 2rem;">₹ 17,999</span>
+												<span class="uk-text-meta">Inclusive of 18% GST</span>
+											</h3>
+											<p class="uk-text-lead">Designed for serious traders and investors who want to become full time traders.</p>
+											<h4>Includes:</h4>
+											<ul class="uk-list uk-list-bullet">
+												<li>Super Trader Course with <b>Live & Pre Recorded Sessions</b></li>
+												<li>Access to <b>10+ Institutional Trading Strategies</b></li>
+												<li><b>Daily Trading & Investing Signals</b> in Cash, F&O, Commodities Segment for Lifetime</li>
+												<li>Daily Watchlist, Stock Research and <b>Assistance with Trade Buddy.</b></li>
+												<li>Daily <b>LIVE Trading with SEBI Registered Experts</b></li>
+												<li>Access to <b>Stryke by StockWiz</b> Trading App</li>
+												<li><b>Lifetime</b> Doubt Support</li>
+											</ul>
+											<a href="https://rzp.io/rzp/FeMRJcc8" class="uk-button uk-button-danger uk-border-rounded uk-width-1-1" target="_blank">Buy Now</a>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div> -->
+					
+					<!-- Mobile Version -->
+					<!-- <div class="uk-hidden@m">
+						<div class="uk-child-width-1-1" uk-grid>
+							<div>
+								<div class="uk-button-group uk-width-1-1">
+									<button class="uk-button uk-button-default uk-width-1-2">VIP</button>
+									<button class="uk-button uk-button-primary uk-width-1-2">
+										<span class="uk-label uk-label-danger" style="position: absolute; top: -10px; right: 10px;">Recommended</span>
+										VIP+
+									</button>
+								</div>
+							</div>
+							
+							<div class="uk-margin-top">
+								<div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+									<div class="uk-card uk-card-secondary uk-card-body uk-border-rounded uk-box-shadow-large">
+										<span class="uk-label uk-label-warning">Hindi</span>
+										<label class="uk-switch">
+											<input type="checkbox" id="languageToggle">
+											<div class="uk-switch-toggle"></div>
+										</label>
+										<span class="uk-margin-small-left">English</span>
+									</div>
+									
+									<div id="hindiContent">
+										<h3 class="uk-margin-small-top">
+											<span style="text-decoration: line-through; font-size: 1.2rem;">₹ 19,999</span>
+											<span class="uk-display-block uk-text-bold" style="font-size: 2rem;">₹ 14,490</span>
+											<span class="uk-text-meta">Inclusive of 18% GST</span>
+										</h3>
+										<p class="uk-text-lead">Designed for serious traders and investors who want to become full time traders.</p>
+										<h4>Includes:</h4>
+										<ul class="uk-list uk-list-bullet">
+											<li>Super Trader Course with <b>Pre Recorded Sessions</b></li>
+											<li>Access to <b>10+ Institutional Trading Strategies</b></li>
+											<li><b>Daily Trading & Investing Signals</b> in Cash, F&O, Commodities Segment for 1 Year</li>
+											<li>Daily Watchlist, Stock Research and <b>Assistance with Trade Buddy.</b></li>
+											<li>Daily <b>LIVE Trading with SEBI Registered Experts</b></li>
+											<li>Access to <b>Stryke by StockWiz</b> Trading App</li>
+											<li><b>365 Days</b> Doubt Support</li>
+										</ul>
+										<a href="https://rzp.io/l/STOCKWIZ" class="uk-button uk-button-primary uk-border-rounded uk-width-1-1" target="_blank">Buy Now</a>
+									</div>
+									
+									<div id="englishContent" style="display: none;">
+										<h3 class="uk-margin-small-top">
+											<span style="text-decoration: line-through; font-size: 1.2rem;">₹ 19,999</span>
+											<span class="uk-display-block uk-text-bold" style="font-size: 2rem;">₹ 14,490</span>
+											<span class="uk-text-meta">Inclusive of 18% GST</span>
+										</h3>
+										<p class="uk-text-lead">Designed for serious traders and investors who want to become full time traders.</p>
+										<h4>Includes:</h4>
+										<ul class="uk-list uk-list-bullet">
+											<li>Super Trader Course with <b>Pre Recorded Sessions</b></li>
+											<li>Access to <b>10+ Institutional Trading Strategies</b></li>
+											<li><b>Daily Trading & Investing Signals</b> in Cash, F&O, Commodities Segment for 1 Year</li>
+											<li>Daily Watchlist, Stock Research and <b>Assistance with Trade Buddy.</b></li>
+											<li>Daily <b>LIVE Trading with SEBI Registered Experts</b></li>
+											<li>Access to <b>Stryke by StockWiz</b> Trading App</li>
+											<li><b>365 Days</b> Doubt Support</li>
+										</ul>
+										<a href="https://rzp.io/l/STOCKWIZ" class="uk-button uk-button-primary uk-border-rounded uk-width-1-1" target="_blank">Buy Now</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> -->
+				<!-- </div>
+			</div> -->
+			
+
+			
+			<div class="uk-container uk-margin-medium-top uk-margin-medium-bottom" style="max-width: 2000px;">
+				<h3 class="uk-text-center uk-margin-medium-bottom">Featured In</h3>
+				
+				<div class="uk-position-relative uk-visible-toggle" tabindex="-1"
+					data-uk-slider="autoplay: true; autoplay-interval: 2000; pause-on-hover: true; velocity: 1; infinite: true">
+					
+					<ul class="uk-slider-items uk-child-width-auto uk-grid-collapse">
+						{% for i in "12345678" %}
+						<li style="margin: 0 10px;">
+							<div>
+								<img src="{% static 'img/featurelogo'|add:i|add:'.svg' %}" 
+									 alt="Logo {{ i }}" 
+									 width="120">
+							</div>
+						</li>
+						{% endfor %}
+						{% for i in "12345678" %}
+						<li style="margin: 0 10px;">
+							<div>
+								<img src="{% static 'img/featurelogo'|add:i|add:'.svg' %}" 
+									 alt="Logo {{ i }}" 
+									 width="120">
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+					
+					<!-- Navigation Arrows -->
+					<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" data-uk-slidenav-previous data-uk-slider-item="previous"></a>
+					<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" data-uk-slidenav-next data-uk-slider-item="next"></a>
+				</div>
+			</div>
+			<!-- <section class="uk-section uk-section-large"> -->
+				<div class="uk-container" style="max-width: 1900px;">
+					<div class="uk-text-center uk-margin-large-bottom">
+						<h2 class="uk-heading-medium uk-text-bold" data-uk-scrollspy="cls: uk-animation-fade; delay: 100">
+							Customer <span style="color: #fc5b3f;">T</span><span class="animatedText"  style="color: #fc5b3f;">estimonials</span>
+						</h2>
+					</div>
+			
+					<div class="uk-position-relative uk-visible-toggle" tabindex="-1" 
+						data-uk-slider="autoplay: true; autoplay-interval: 2000; pause-on-hover: true; infinite: true; center: true">
+						
+						<ul class="uk-slider-items uk-grid-medium uk-child-width-1-1 uk-child-width-1-2@m uk-child-width-1-3@l">
+							<!-- Testimonial 1 -->
+							{% for t in testi %}
+							<li>
+								<div class="uk-card uk-card-secondary uk-border-rounded">
+									<!-- Image and Name Header - Using Grid for Proper Alignment -->
+									<div class="uk-card-customer-media-top uk-padding-small">
+										<div class="uk-grid-small uk-flex-middle" data-uk-grid>
+											<!-- Image (Left Side) -->
+											<div class="uk-width-auto">
+												<img class="uk-border-circle" 
+													 src="{{t.image.url}}" 
+													 data-src="{{t.image.url}}" 
+													 width="80" 
+													 height="80" 
+													 alt="{{t.name}}"
+													 data-uk-img>
+											</div>
+											
+											<!-- Name and Title (Right Side) -->
+											<div class="uk-width-expand">
+												<h3 class="uk-card-title uk-margin-remove-bottom">{{t.name}}, {{t.profession}}</h3>
+												<p class="uk-text-meta uk-margin-remove-top uk-text-emphasis">"{{t.title}}"</p>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Testimonial Content -->
+									<div class="uk-card-body">
+										<p>{{t.description}}</p>
+									</div>
+								</div>
+							</li>
+							{% endfor %}
+							{% for t in testi %}
+							<li>
+								<div class="uk-card uk-card-secondary uk-border-rounded">
+									<!-- Image and Name Header - Using Grid for Proper Alignment -->
+									<div class="uk-card-customer-media-top uk-padding-small">
+										<div class="uk-grid-small uk-flex-middle" data-uk-grid>
+											<!-- Image (Left Side) -->
+											<div class="uk-width-auto">
+												<img class="uk-border-circle" 
+													 src="{{t.image.url}}" 
+													 data-src="{{t.image.url}}" 
+													 width="80" 
+													 height="80" 
+													 alt="{{t.name}}"
+													 data-uk-img>
+											</div>
+											
+											<!-- Name and Title (Right Side) -->
+											<div class="uk-width-expand">
+												<h3 class="uk-card-title uk-margin-remove-bottom">{{t.name}}, {{t.profession}}</h3>
+												<p class="uk-text-meta uk-margin-remove-top uk-text-emphasis">"{{t.title}}"</p>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Testimonial Content -->
+									<div class="uk-card-body">
+										<p>{{t.description}}</p>
+									</div>
+								</div>
+							</li>
+							{% endfor %}
+						</ul>
+			
+						<!-- Navigation Arrows -->
+						<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" data-uk-slidenav-previous data-uk-slider-item="previous"></a>
+						<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" data-uk-slidenav-next data-uk-slider-item="next"></a>
+					</div>
+				</div>
+	</main>
+{% endblock content %}
+	{% block footer %}
+	<!-- footer begin -->
+	<footer>
+		<div class="uk-section uk-section-secondary in-footer-feature uk-margin-medium-top">
+			<div class="uk-container">
+				<div class="uk-grid uk-flex uk-flex-center">
+					<div class="uk-width-5-6@m">
+						<div class="uk-grid uk-grid-collapse uk-child-width-1-3@s" data-uk-grid="">
+							<div class="uk-flex uk-flex-middle">
+								<div class="in-icon-wrap uk-margin-right">
+									<i class="fas fa-history"></i>
+								</div>
+								<div>
+									<h6 class="uk-margin-remove">25 years of Excellence</h6>
+								</div>
+							</div>
+							<div class="uk-flex uk-flex-middle uk-flex-center@m">
+								<div class="in-icon-wrap uk-margin-right">
+									<i class="fas fa-trophy"></i>
+								</div>
+								<div>
+									<h6 class="uk-margin-remove">15+ Global Awards</h6>
+								</div>
+							</div>
+							<div class="uk-flex uk-flex-middle uk-flex-right@m">
+								<div class="in-icon-wrap uk-margin-right">
+									<i class="fas fa-phone-alt"></i>
+								</div>
+								<div>
+									<h6 class="uk-margin-remove">24/5 Customer Support</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="uk-section uk-background-secondary uk-light">
+			<div class="uk-container uk-text-small">
+				<div class="uk-child-width-1-2@m" data-uk-grid="">
+					<div class="in-footer-logo">
+						<img src="{% static 'img/in-lazy.gif' %}" data-src="{% static 'img/in-logo.svg' %}" alt="logo" width="127" height="27" data-uk-img="">
+					</div>
+					<div class="uk-flex uk-flex-right@m">
+						<!-- social media begin -->
+						<div class="uk-flex social-media-list">
+							<div><a href="https://www.facebook.com/indonez" class="color-facebook text-decoration-none"><i class="fab fa-facebook-square"></i> Facebook</a></div>
+							<div><a href="https://twitter.com/indonez_tw" class="color-twitter text-decoration-none"><i class="fab fa-twitter"></i> Twitter</a></div>
+							<div><a href="https://www.instagram.com/indonez_ig" class="color-instagram text-decoration-none"><i class="fab fa-instagram"></i> Instagram</a></div>
+							<div><a href="#some-link" class="color-telegram text-decoration-none"><i class="fab fa-telegram"></i> Telegram</a></div>
+							<div><a href="#some-link" class="color-youtube text-decoration-none"><i class="fab fa-youtube"></i> Youtube</a></div>
+						</div>
+						<!-- social media end -->
+						<a class="uk-button uk-button-text uk-margin-large-left uk-visible@m" href="#">Company News</a>
+						<a class="uk-button uk-button-text uk-margin-large-left uk-visible@m" href="#">Partnership</a>
+					</div>
+				</div>
+				<div class="footer-top">
+					<div class="uk-container">
+					  <div class="uk-grid" data-uk-grid>
+						<!-- Left Column (Logo & Company Info) -->
+						<div class="uk-width-1-4@m uk-width-1-1@s">
+						  <div class="ftt-lg-sec">
+							<p class="uk-margin-small-top">
+							  Welcome to our trading platform. We offer education, advisory & research services.
+							</p>
+							
+							<!-- Company Details -->
+							<div class="uk-card uk-card-secondary uk-card-body uk-card-hover uk-card-small uk-margin-top uk-dark" 
+								style="background: #1a1a1a; border-radius: 8px; border: 1px solid #333;">
+								<h6 class="uk-card-title uk-text-bold" style="color: #fff;">
+									Company Details
+								</h6>
+								
+								<dl class="uk-description-list" style="color: #ccc;">
+									<dt style="color: #aaa;">Company Name</dt>
+									<dd>Trading Experts LLC</dd>
+									
+									<dt style="color: #aaa;">Email</dt>
+									<dd><a href="mailto:contact@example.com" style="color: #fc5b3f;">contact@example.com</a></dd>
+									
+									<dt style="color: #aaa;">Phone</dt>
+									<dd><a href="tel:+1234567890" style="color: #fc5b3f;">+1 (234) 567-890</a></dd>
+									
+									<dt style="color: #aaa;">Registered Address</dt>
+									<dd>123 Trading Street, Financial District</dd>
+									
+									<dt style="color: #aaa;">Registration</dt>
+									<dd>REG12345678</dd>
+								</dl>
+							</div>
+						  </div>
+						</div>
+						
+						<!-- Right Columns (Links) -->
+						<div class="uk-width-3-4@m uk-width-1-1@s">
+						  <div class="uk-grid" data-uk-grid>
+							<!-- Quick Links -->
+							<div class="uk-width-1-4@m uk-width-1-2@s">
+							  <div class="single-link">
+								<h5>Quick Links</h5>
+								<ul class="uk-list uk-link-text">
+								  <li><a href="about.html">About Us</a></li>
+								  <li><a href="pricing.html">Pricing</a></li>
+								  <li><a href="features.html">Features</a></li>
+								  <li><a href="faq.html">FAQs</a></li>
+								  <li><a href="contact.html">Contact Us</a></li>
+								</ul>
+							  </div>
+							</div>
+							
+							<!-- Legal -->
+							<div class="uk-width-1-4@m uk-width-1-2@s">
+							  <div class="single-link">
+								<h5>Company</h5>
+								<ul class="uk-list uk-link-text">
+								  <li><a href="disclaimer.html">Disclaimer</a></li>
+								  <li><a href="terms.html">Terms & Conditions</a></li>
+								  <li><a href="privacy.html">Privacy Policy</a></li>
+								  <li><a href="refund.html">Refund Policy</a></li>
+								  <li><a href="risk.html">Risk Disclosure</a></li>
+								</ul>
+							  </div>
+							</div>
+							
+							<!-- Contact Info -->
+							<div class="uk-width-1-2@m uk-width-1-1@s">
+								<div class="single-link uk-dark" style="padding: 20px; border-radius: 8px;">
+									<h5 class="uk-text-bold" style="color: #fff; margin-bottom: 20px;">Contact Us</h5>
+									
+									<!-- Call Us Section -->
+									<div class="uk-margin-bottom">
+										<span class="uk-text-meta" style="color: #aaa;">Call Us:</span>
+										<div class="uk-flex uk-flex-middle uk-margin-small-top">
+											<img src="{% static 'img/call.svg' %}" alt="call" width="20" class="uk-margin-small-right">
+											<div>
+												<a href="tel:+91 7096339944" class="uk-display-block uk-link-danger">+91-7096339944</a>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Working Hours -->
+									<div class="uk-margin-bottom">
+										<span class="uk-text-meta" style="color: #aaa;">Working Hours:</span>
+										<div class="uk-flex uk-flex-middle uk-margin-small-top">
+											<img src="{% static 'img/time.svg' %}" alt="time" width="20" class="uk-margin-small-right">
+											<span style="color:#fff">10:00 am to 9:00 pm (Mon - Sun)</span>
+										</div>
+									</div>
+									
+									<!-- WhatsApp -->
+									<div class="uk-margin-bottom">
+										<span class="uk-text-meta" style="color: #aaa;">WhatsApp Us:</span>
+										<div class="uk-grid-small uk-child-width-1-1 uk-margin-small-top" uk-grid>
+											<div class="uk-flex uk-flex-middle">
+												<img src="{% static 'img/whatsup.svg' %}" alt="whatsapp" width="20" class="uk-margin-small-right">
+												<span style="color:#fff"><a href="https://wa.me/7984971743" target="_blank">+91-7984971743</a></span>
+											</div>
+											<div class="uk-flex uk-flex-middle">
+												<img src="{% static 'img/whatsup.svg' %}" alt="whatsapp" width="20" class="uk-margin-small-right">
+												<span style="color:#fff"><a href="https://wa.me/7096339944" target="_blank">+91-7096339944</a></span>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Email -->
+									<div class="uk-margin-bottom">
+										<span class="uk-text-meta" style="color: #aaa;">Email Us:</span>
+										<div class="uk-flex uk-flex-middle uk-margin-small-top">
+											<img src="{% static 'img/email.svg' %}" alt="email" width="20" class="uk-margin-small-right">
+											<a href="mailto:help@stockwiz.in" class="uk-link-danger">help@stockwiz.in</a>
+										</div>
+									</div>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+						
+						<!-- Social Media -->
+						<div class="uk-width-1-1 uk-margin-top">
+						  <ul class="uk-flex-center" uk-grid>
+							<li><a href="#" uk-icon="icon: facebook"></a></li>
+							<li><a href="#" uk-icon="icon: twitter"></a></li>
+							<li><a href="#" uk-icon="icon: linkedin"></a></li>
+							<li><a href="#" uk-icon="icon: instagram"></a></li>
+							<li><a href="#" uk-icon="icon: youtube"></a></li>
+						  </ul>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				<div class="uk-grid uk-margin-large-top">
+					<div class="uk-width-1-1">
+						<p class="copyright-text uk-heading-line"><span>Copyright ©2021 Liquid Inc. All Rights Reserved.</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+	<!-- footer end -->
+	<!-- to top begin -->
+	<a href="#" class="to-top uk-visible@m" data-uk-scroll>
+		Top<i class="fas fa-chevron-up" ></i>
+	</a>
+	<!-- to top end -->
+	<!-- javascript -->
+	<script src="{% static 'js/utilities.min.js' %}"></script>
+	<script src="{% static 'js/config-theme.js' %}"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type = "text/javascript">
+       $(document).ready(function() {
+			console.log('Document ready - initializing stock data fetch');
+			
+			// Fetch data for all stocks initially
+			{% for stock in stocks %}
+			fetchStockData('{{ stock.symbol }}');
+			{% endfor %}
+
+			// Set up periodic refresh (every 60 seconds)
+			setInterval(function() {
+				console.log('Refreshing stock data...');
+				{% for stock in stocks %}
+				fetchStockData('{{ stock.symbol }}');
+				{% endfor %}
+			}, 60000);
+		});
+
+		function fetchStockData(symbol) {
+			console.log(`Fetching data for ${symbol}`);
+			const STOCK_DATA_URL = "{% url 'stock_data' 'REPLACE' %}".replace('REPLACE', '');
+			$.ajax({
+				url: STOCK_DATA_URL + symbol + '/',
+				type: 'GET',
+				headers: { 
+					"X-CSRFToken": getCookie('csrftoken') 
+				},
+				success: function(data) {
+					console.log('successs',data)
+					if (!data.error) {
+						updateStockDisplay(symbol, data);
+					}
+				},
+				error: function(xhr, status, error) {
+					console.error(`Error fetching ${symbol}:`, error);
+				}
+			});
+		}
+
+		function updateStockDisplay(symbol, data) {
+    const container = $(`[data-symbol="${symbol}"]`);
+    const priceElement = container.find('.price');
+    const changeElement = container.find('.change-percent');
+    const cardElement = container.find('.stock-card');
+
+    // Update price
+    priceElement.text(data.price.toFixed(2));
+
+    // Update change percentage and styling
+    cardElement.removeClass('uk-label-success uk-label-danger');
+    
+    if (data.change >= 0) {
+        cardElement.addClass('uk-label-success');
+        changeElement.html(`+${data.change.toFixed(2)}% <i class="fas fa-caret-up"></i>`);
+    } else {
+        cardElement.addClass('uk-label-danger');
+        changeElement.html(`${data.change.toFixed(2)}% <i class="fas fa-caret-down"></i>`);
+    }
+
+    console.log(`Updated display for ${symbol}`);
+}
+
+
+		// CSRF token helper function
+		function getCookie(name) {
+			let cookieValue = null;
+			if (document.cookie && document.cookie !== '') {
+				const cookies = document.cookie.split(';');
+				for (let i = 0; i < cookies.length; i++) {
+					const cookie = cookies[i].trim();
+					if (cookie.substring(0, name.length + 1) === (name + '=')) {
+						cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+						break;
+					}
+				}
+			}
+			return cookieValue;
+		}
+		document.addEventListener('DOMContentLoaded', function() {
+		const animatedTextElements = document.querySelectorAll('.animatedText'); // Select all elements with class
+		
+		animatedTextElements.forEach((element) => {
+			const originalText = element.textContent;
+			
+			function animateText() {
+				let currentText = originalText;
+				let i = originalText.length;
+				
+				// Text remove animation
+				const removeInterval = setInterval(() => {
+					if (i >= 0) {
+						element.textContent = currentText.substring(0, i);
+						i--;
+					} else {
+						clearInterval(removeInterval);
+						i = 0;
+						
+						// Text add animation
+						const addInterval = setInterval(() => {
+							if (i <= originalText.length) {
+								element.textContent = originalText.substring(0, i);
+								i++;
+							} else {
+								clearInterval(addInterval);
+								setTimeout(animateText, 1000); // Repeat after 1 sec
+							}
+						}, 100);
+					}
+				}, 100);
+			}
+			
+			animateText(); // Start animation for each element
+		});
+	});
+
+	// Mobile language toggle functionality
+	document.getElementById('languageToggle').addEventListener('change', function() {
+		if(this.checked) {
+			document.getElementById('hindiContent').style.display = 'none';
+			document.getElementById('englishContent').style.display = 'block';
+		} else {
+			document.getElementById('hindiContent').style.display = 'block';
+			document.getElementById('englishContent').style.display = 'none';
+		}
+	});
+	
+	// Tab switching functionality for mobile
+	const buttons = document.querySelectorAll('.uk-button-group .uk-button');
+	buttons.forEach(button => {
+		button.addEventListener('click', function() {
+			buttons.forEach(btn => btn.classList.remove('uk-button-primary'));
+			this.classList.add('uk-button-primary');
+			
+			// Here you would add logic to switch between VIP and VIP+ content
+			// Similar to the desktop version but adjusted for mobile
+		});
+	});
+    </script>
+	<!-- In your <head> -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Before </body> -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Initialize AOS with smooth settings
+  AOS.init({
+    duration: 800,          // 0.8s animation (sweet spot)
+    easing: 'ease-out-quad',// Smoother curve (requires AOS v2.3+)
+    once: false,            // Repeats on scroll-up
+    offset: 150,            // Triggers 150px before element
+    delay: 100,             // Stagger between cards
+    anchorPlacement: 'top-bottom', // Natural scroll trigger
+  });
+</script>
+{% endblock footer %}
+</body>
+
+</html>
